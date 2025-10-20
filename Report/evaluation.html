@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCS Coursework 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <h1>LCCS Coursework 2024</h1>
+        <p class="lead">Factors that affect Happiness</p>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Meeting the Brief</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investigation.html">Investigation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="planDesign.html">Plan and Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.html">Create</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Evaluation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="references.html">References & Word Count</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-4">
+    <section>
+        <h2><u>Evaluation of the final artefact with respect to the brief:</u></h2>
+        <ul>
+            <li>I used a Raspberry Pi and a camera module and created a fully automated embedded system that gathers information on Wellbeing. This meets BR1, as no point throughout the execution of my code, did I tinker with code written. I only executed files and entered user inputs.
+                </li>
+            <li>I fulfilled BR2, as my embedded system tracks the user input by writing it into a .csv file. This way, the user can always access their past biometric data.</li>
+            <li>My project fulfilled BR3, as I created a display menu in my main.py script, which gives the user the option to view different aspects of biometric data in various different graphical formats.</li>
+            <li>My project fulfilled AR1, as I generated my own dataset with multiple different aspects related to health. I did this by using the user data I collected and scaling it to 170 points by using a random distribution model. This is found in generate.py</li>
+            <li>I fulfilled AR2, by creating 2 what-if questions and made sure to use 3 validated parameters and 2 different data types. I used a primary data type (integer, strings, booleans, floats) and a derived data type, which are data types made up of primary data types, like (lists, tuple, dictionaries & Pandas Dataframe).</li>
+            <li>We also met AR3, as we created a regression model and allowed the users to learn valuable information  about their biometric data in a graphical manner.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Evaluation of the final artefacts with user needs in Investigation:</u></h2>
+        <ul>
+            <li>The user needs were unfortunately not fully met throughout this project.
+                The main user need not being met, is the portability of this happiness detector. 
+                The user is bound to a monitor and must manually enter the inputs via a wired key and mouse.
+                </li>
+            <li>I also met the user’s need of it being cheap, my product only costs $40 if you already have a display with a HDMI port.</li>
+            <li>My product met the user’s need to be customizable as you can add more accessories to the embedded system (like led lights, speakers and bluetooth), the options are endless as you can connect anything to the Raspberry Pi.</li>
+            <li>I also met the user need of their data being safe as it is stored locally on the Raspberry Pi, but it could be more safer if I had encrypted their biometric data.</li>
+            <li>From my testing and other user's experience, my project seems to be fairly accurate. Emotion is not a quantifiable variable, so it is impossible to correctly identify the emotion every time, but according to my test users, it is pretty accurate reprensentation of how they are feeling.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Iterations I went through during the process:</u></h2>
+        <ul>
+            <li>Initially, I wanted to detect different emotions and ask them their desired emotional state to be in. Then, I would give the user a list of instruction/quotes or some output that would help them meet that desired state.</li>
+            <li>This idea did not work, as I needed Deepface as a library. This library is very memory heavy and requires a lot of computation power (GPU) which my Raspberry Pi lacks. So I had to use opencv, (not much better) to take a picture and detect the face.
+            </li>
+            <li>I tried to derive a system of equations for the 3d-graph of all the factors in 3dGraph.py, but the maths seemed to be too hard for me as it required Linear Algebra, and we have not learned it yet.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>What I would improve/add in the future if I had more resources (time & money):</u>
+        </h2>
+        <ul>
+            <li>If I had, more time, I would used a website or a GUI for my user inputs. I find the Command Line Interface (CLI) to be very boring and visually appealing. I would have done this via a website, had I more time and if I was more proficient in JavaScript.</li>
+            <li>I would have made an option for the user, to insert a previously taken image into the model and still give out an output. Currently, the model requires a live feed, but had I more time, I would have made I compatible with pictures and videos.</li>
+            <li>In a future iteration, I would have created a Bluetooth option, where you could share and rad your biometric data with the embedded system, without necessarily needing to interact with it. I would have done this, If I had more time to learn Java, more money to buy a bluetooth transmitter and more knowledge on how Bluetooth works.</li>
+            <li>I would have also encoded the biometric data in a future iteration, to keep the user’s privacy in mind.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy;Exam Number: 146792</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

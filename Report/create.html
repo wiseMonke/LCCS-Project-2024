@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCS Coursework 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <h1>LCCS Coursework 2024</h1>
+        <p class="lead">Factors that affect Happiness</p>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Meeting the Brief</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investigation.html">Investigation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="planDesign.html">Plan and Design</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="evaluation.html">Evaluation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="references.html">References & Word Count</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-4">
+    <section>
+        <h2><u>Problem encountered during the process:</u></h2>
+        <ul>
+            <li>The most significant issue I encountered during this project was Dependency Conflicts with Python packages. Dependency Conflicts occur when you install a Python package but that prevents another package from working due to compatability issues.</li>
+            <li>I was able to build the code without errors, however when executed, it resulted in runtime errors due to incompatible external libraries.</li>
+            <li>This took a lot of time to figure out what was going wrong, as I had no syntax error, logic error or even missing packages</li>
+            <li>Conflicting dependencies also messed up my interpreter and I had no idea what had gone wrong.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>How I overcame this issue:</u></h2>
+        <ul>           
+            <li>I temporarily fixed the problem, by flashing the Raspberry Pi OS again onto the microSD card. This temporarily reset all the default packages and libraries to their ground state</li>
+            <li>But this was not a permanent solution as it would break the system packages when I downloaded external packages.</li>
+            <li>I had to install another (older) version of Python so that it would be supported by all my dependencies. This had its own problem as it led to there being a conflict with the global interpreter and local interpreter. I had to use pyenv, a python version manager to avoid this conflict.</li>
+    
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Software used to solve this:</u></h2>
+        <ul>
+            <li>I used a built-in container(virtual environment, similar to docker container) made for python packages to avoid conflicting packages. This way all the packages I needed for this project are kept isolated from my global packages and prevents any dependency errors.</li>
+            <li>I also used pyenv to help sort out the different Python Interpreters I had on my System. It helped seperate the global and local Interpreters.</li>
+            <li>I also used a debugger, this was very helpful. I always knew about the debugger but never used it as I never coded something so complex.</li>
+            <li>It turned out to be a life-saver as it always helped me find logical errors in my code.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Essential piece of code in my Project:</u></h2>
+        <ul>
+            <li>The code in generate.py is very important for my Advanced Requirements as it generates the data needed for my regressions.</li>
+            <li>It is crucial in answering my 2 "What-If" Questions and is needed to accurately model any regression in my project.</li>
+            <li>Another important piece of code in my project, is picture.py, This script is called by main.py and is the bridge between the RPi OS and the sensor.</li>
+            <li>Code is crucial as it is needed to fulfill my Basic Requirements and helps tick the boxes for digital/analogue input & outpupts.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>What does it do and how does it work:</u></h2>
+        <ul>
+            <li>The code in generate.py, creates 170 data points for me using the <b>Normal Distribution</b>, this models the population more accurately than randomly choosing numbers.</li>
+            <li>It is crucial in answering my 2 "What-If" Questions and is needed to accurately model any regression in my project.</li>
+            <li>The data created by generate.py (simulated.csv) is used to create all my advanced requirement graphs (regressions & 3D Graphs)</li>
+            <li>Another important piece of code in my project, is picture.py, This main function in <b>picture.py</b> is called by main.py and is the bridge between the RPi OS and the sensor.</li>
+            <li>This code is crucial as it is needed to fulfill my Basic Requirements and helps tick the boxes for digital/analogue input & outpupts.</li>
+            <li>It not only read images from a live video stream, but also detects the faces by detecting R.O.I (Region of Interest) and draws a box around the R.O.I.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Unit Testing Carried Out</u></h2>
+        <ul>
+            <li>I used Black Box Testing Extensively throughout my project. This is because this was the easiest to explain and carry out.</li>
+            <li>I could not carry out White Box testing as much because how the Camera captures live images and transforms them into digital data is far beyong my knowledge</li>
+            <li>Throughout all my iterations, I used Black Box Testing. This way, I was always sure that my code worked the way it was meant to.</li>
+            <li>To carry out Black Box Testing, I decided to create some test cases in a table in Word. I predicted the desired output and wrote a function to carry this out.</li>
+            <li>I used the Dict data type here to bond a test-case and its expected value. This way, I could easily check if a test case passed instead of checking via If-statements.</li>
+            <li>I used all possible data types and edge cases to break my input function. All the invalid inputs were correctly handled via Exceptions and all the inputs met my desired output.</li>
+            <li>When all my test cases passed, I knew my function was <b>"Unbreakable"</b> and I was happy to use it in my embedded sytem.</li>
+            <li>I carried out System Testing towards the end of my project, when filming the video to make sure all the components of my project (camera, RPi, monitor, keyboard) all work together.</li>
+            <li>System Testing refers to the whole system working in unison and from my video, it is evident that my project passed its system testing requirements, as it works fine with its sensors and external devices.</li>
+        </ul>
+    </section>
+
+    <section class="colorful-section">
+        <h2><u>Weekly Log</u></h2>
+        <div class="row image-container">
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/importantCode.png" alt="Image 1" onclick="expandImage(this)">
+                    <p><b>Generation of my dataset (extrapolation) (generate.py)</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/importantCode1.png" alt="Image 2" onclick="expandImage(this)">
+                    <p><b>Code that takes reads images and detects faces. (picture.py)</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/testCase.png" alt="Image 3" onclick="expandImage(this)">
+                    <p><b>Unit Testing Function (Black Box).</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/testTableCases.png" alt="Image 3" onclick="expandImage(this)">
+                    <p><b>Unit Testing Table (Black Box).</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="colorful-section">
+        <h2><u>Weekly Log</u></h2>
+        <div class="row image-container">
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/1stWrite.png" alt="Image 1" onclick="expandImage(this)">
+                    <p><b>Write-Up of first 2 weeks.</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/2ndWrite.png" alt="Image 2" onclick="expandImage(this)">
+                    <p><b>Write-Up of week 3 & week 4.</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/3rdWrite.png" alt="Image 3" onclick="expandImage(this)">
+                    <p><b>Write-Up of week 5 & week 6.</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/4thWrite.png" alt="Image 4" onclick="expandImage(this)">
+                    <p><b>Write-Up of week 7 & week 8.</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/5thWrite.png" alt="Image 5" onclick="expandImage(this)">
+                    <p><b>Write-Up of week 9 & week 10.</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/6thWrite.png" alt="Image 6" onclick="expandImage(this)">
+                    <p><b>Write-Up of week 11 & week 12.</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy;Exam Number: 146792</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

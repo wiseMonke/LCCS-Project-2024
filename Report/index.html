@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCS Coursework 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <h1>LCCS Coursework 2024</h1>
+        <p class="lead">Factors that affect Happiness</p>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Meeting the Brief</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investigation.html">Investigation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="planDesign.html">Plan and Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.html">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="evaluation.html">Evaluation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="references.html">References & Word Count</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-4">
+    <section class="colorful-section">
+        <h2><u>Video Section</u></h2>
+        <div class="video-container">
+            <video controls>
+                <source src="assets/NewProjectVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p>This is my video, that I recorded showing my fully automated embedded system working .</p>
+    </section>
+
+    <section>
+        <h2><u>How I met the Requirements in the Brief</u></h2>
+        <ul>
+            <li>I met BR1 as the embedded system is fully automatic and it utilises digital/analogue inputs and outputs, It uses the camera module as the the analogue input, while the user entering inputs via a wired keyboard is my digital inputs.</li>
+            <li>My embedded system also uses digital outputs when it writes the user input into .csv file, this fulfills BR2 as it is storing and validating user inputs in a .csv file.</li>
+            <li>My project also fulfills BR3, as it offers the user to see their biometric data in a graphical format, We see this in the video and also the graphs are present below.</li>
+            <li>AR1 is fully met, as I am using a dataset with multiple aspects (data points) being linked to WellBeing. I actually interpolated this data from the user inputs I collected.</li>
+            <li>I met AR2, as I discussed 2 "What-If" Questions above in the video and what data/outputs they show.</li>
+            <li>AR3 is fulfilled as in the video above, the user has the oppurtunity to see more detailed data like regressions in a graphical format. These graphs are shown below.</li>        
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>My "What-If" Questions</u></h2>
+        <ul>
+        <li>My first "What-If" question is: <b>What factor affects Happiness the most and what type of correlationship does each factor have with happiness</b></li>
+        <li>My second "What-If" question is:<b> What activity out of Music, Sport & Mediation, increase happiness (%) the most with respect to time (hours)</b></li>
+        <li>I used 3 inputs in my main.py and validated them to make sure the were all integers within the range [1, 10], this fulfills the 3 validated parmeters</li>
+        <li>I also used a pandas DataFrame to read values easier from the .csv file, this DataFrame is a derived datatype (made up of integers and strings) and fulfills the 2 different data types.</li>
+        <li>This way met the requirements for both my "What-If" Questions as I do the same for Q2, but take in a string and integer as an input, validate them and store them in a pandas DataFrame as well.</li>
+        </ul>
+    </section>
+
+    <section class="colorful-section">
+        <h2><u>Basic Requirement Outputs (BR3)</u></h2>
+        <div class="image-container row">
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Stress_Bar_Chart.png" alt="Image 1" onclick="expandImage(this)">
+                    <p>Bar chart of collected user data for stress</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Sleep_Bar_Chart.png" alt="Image 2" onclick="expandImage(this)">
+                    <p>Bar chart of collected user data for sleep</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Light_Bar_Chart.png" alt="Image 3" onclick="expandImage(this)">
+                    <p>Bar chart of collected user data for Light</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Happiness_Bar_Chart.png" alt="Image 4" onclick="expandImage(this)">
+                    <p>Bar chart of Happiness values calculated from previous inputs</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Happiness_and_3Factors.png" alt="Image 5" onclick="expandImage(this)">
+                    <p>Bar Chart of all the 3 factors per input and scatterplot of Happiness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="colorful-section">
+        <h2><u>Advanced Requirement Outputs (AR3)</u></h2>
+        <div class="image-container row">
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/3Factor_Regression.png" alt="Image 1" onclick="expandImage(this)">
+                    <p>Linear Regression for each of the inputs with respect to Happiness</p>
+                    <p><b>What-If Question 1</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/3D_Light_Stress.png" alt="Image 2" onclick="expandImage(this)">
+                    <p>3D Graph of how Light & Stress correlate to Happiness</p>
+                    <p><b>What-If Question 1</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/3D_Sleep_Light.png" alt="Image 3" onclick="expandImage(this)">
+                    <p>3D Graph of how Sleep & Light correlate to Happiness</p>
+                    <p><b>What-If Question 1</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/3D_Stress_Sleep.png" alt="Image 4" onclick="expandImage(this)">
+                    <p>3D Graph of how Stress & Sleep correlate to Happinesss</p>
+                    <p><b>What-If Question 1</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/3D_3Factors.png" alt="Image 5" onclick="expandImage(this)">
+                    <p>3D Graph of all the 3 factors studied and how they correlate to Happiness</p>
+                    <p><b>What-If Question 1</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Activity_3Factor.png" alt="Image 6" onclick="expandImage(this)">
+                    <p>Regression for all 3 external activities and how much they increase happiness (%) with respect to time (hours)</p>
+                    <p><b>What-If Question 2</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy;Exam Number: 146792</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

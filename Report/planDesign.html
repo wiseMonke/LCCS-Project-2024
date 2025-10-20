@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCS Coursework 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <h1>LCCS Coursework 2024</h1>
+        <p class="lead">Factors that affect Happiness</p>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Meeting the Brief</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investigation.html">Investigation</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Plan and Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.html">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="evaluation.html">Evaluation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="references.html">References & Word Count</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-4">
+    <section>
+        <h2><u>Description of my Project</u></h2>
+        <ul>
+            <li>My project is an embedded system that will be designed to track happiness of 3 factors (Stress, Light Level & Sleep).</li>
+            <li>From these 3 inputs, my project will then take an image of the user using the Rpi camera module and will analyse the user’s face, with the given inputs and give you a percentage (happiness).</li>
+            <li>It will later give you an option menu to see you biometric data in a grapical format.</li>
+            <li>The user can see 3 different regression models, which mathematically and graphically will show the relationship between the individual factors and happiness. (Positive/Negative Correlation).</li>
+            <li>It also shows a 3d graph, with each factor being a plane and intersecting each other. This shows us all the trends when these factors intersect.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Personal Objectives from this Project:</u></h2>
+        <ul>
+            <li>I hope to be better at coding embedded systems like Raspberry Pi, since this is my first time using one.</li>
+            <li>I hope to have improved my knowledge and skill on external libraries (cv2, numpy, matplotlib & pandas).</li>
+            <li>By the end of this project, I want to be able to explain exactly how the cv2 module detects faces using the camera module.</li>
+            <li>I should also be better at graphing and regressions, since I have not done them since 5th year.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>How my projects will meet the user needs mentioned in Investigation:</u></h2>
+        <ul>
+            <li>I will meet my user’s needs of keeping the data private and safe, as the .csv file is secure and the data is stored locally.</li>
+            <li>I also have considered the user’s price concern’s into mind as this whole system costs $40, if you already have a display.</li>
+            <li>The user’s concerns about it being customizable is also accounted for, but it has a caveat. You need to be able to understand and write code to do so. This does not appeal to a vast majority of my end users and does not follow good Design Principles as it does not offer Abstraction to the End Users.</li>
+            <li>User requirements such as battery operated and highly portable features will not be supported by this product design, as it constantly needs to be plugged into the power source.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>How my projects will meet the basic requirements:</u></h2>
+        <ul>
+            <li>My project meets BR1, as it is a fully automated embedded system that utilises digital/analogue input & outputs based on the theme of well-being.
+                The Raspberry Pi acts my embedded system and it is fully automated as there is no need for the user to mess around with the code for the application to work.</li>
+            <li>It also utilises analogue inputs (Rpi camera module) which reads and process live images and digital inputs (User inputs entered via a wired keyboard to the Rpi) as it is a part of the system.
+                My project meets BR2, because it uses digital output when the Rpi writes the user inputs into a .csv file and It validates the 3 inputs from the user (Stress, Sleep and Light Levels) and makes sure that they are in the given range [1, 10] and of the right data type (int). It finally writes this data to .csv file. (Meets BR2)
+
+                </li>
+            <li>My project also meets BR3 because it uses the user inputs to create a bias on the happiness detection. This way it analyses the user data and makes an informed calculation about the user happiness.
+                My project also gives the user an option menu to see multiple different graphs on the their previous history on each individual factor. (Meets BR3)
+                </li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2><u>How my projects will meet the advanced requirements:</u></h2>
+        <ul>
+            <li>My project meets AR1, because I have utilised a dataset which contains multiple descriptive features of wellbeing and also is capable of answering 2 what-if questions.
+                I programmatically simulated (interpolated)  using the Normal distribution method since I had limited  data set of 30 users.
+                </li>
+            <li>I have fulfilled AR2 by making up 2 what-if questions (What factor affects the happiness the most and what is the correlation between it) & (What external activity is the most efficient at increasing happiness when done over a fixed period of time)</li>
+            <li>The user’s concerns about it being customizable is also accounted for, but it has a caveat. You need to be able to understand and write code to do so. This does not appeal to a vast majority of my end users and does not follow good Design Principles as it does not offer Abstraction to the End Users.</li>
+            <li>I also fulfilled AR3, because the users can choose to see the data in different graphical formats. (Regression Models, 2D graphs & 3D graphs) and get more detailed information about their biometrics.</li>
+        </ul>
+    </section>
+
+
+    <section class="colorful-section">
+        <h2><u>Diagram Gallery</u></h2>
+        <div class="row image-container">
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Flowchart_ImageProcess.png" alt="Image 1" onclick="expandImage(this)">
+                    <p><b>Flowchart of how the sensor captures and image and detects the face</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Flowchart_DataGeneration.png" alt="Image 2" onclick="expandImage(this)">
+                    <p><b>Flowchar of how I simulated my DataSet using Normal Distribution in Numpy</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/ArchitectureDiagram.png" alt="Image 3" onclick="expandImage(this)">
+                    <p><b>Architecture Diagram shows all hardware used and what process they carry out.</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Flowchart_InputValidation.png" alt="Image 4" onclick="expandImage(this)">
+                    <p><b>Flowchart of how the user input is handled in my project (main.py)</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/Pseudocode.png" alt="Image 5" onclick="expandImage(this)">
+                    <p><b>Detailed Pseudocode of my project</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/SoftwareUsed.png" alt="Image 6" onclick="expandImage(this)">
+                    <p><b>What Software I am going to use for this project</b></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/HardwareUsed.png" alt="Image 9" onclick="expandImage(this)">
+                    <p><b>What Hardware I will need to use for this project</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy;Exam Number: 146792</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

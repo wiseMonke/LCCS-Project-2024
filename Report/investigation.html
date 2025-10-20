@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCS Coursework 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <h1>LCCS Coursework 2024</h1>
+        <p class="lead">Factors that affect Happiness</p>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Meeting the Brief</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Investigation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="planDesign.html">Plan and Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.html">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="evaluation.html">Evaluation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="references.html">References & Word Count</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-4">
+    <section>
+        <h2><u>Primary Research I conducted</u></h2>
+        <ul>
+            <li>I created a survey on Microsoft Forms to gather data on potential end users for my product.</li>
+            <li>I sent every 6th year in my school the survey and collected the response on excel and sorted them out into different sheets. I also graphed the data, using the graph function on excel as this allows me to read the data more easily and interpret it quicker.</li>
+            <li>A problem I faced was that, not everyone responded to my survey, I only got 30 students out of my whole year (110 students) answering my survey in the whole week.</li>
+            <li>I also was aware of the fact, that my data and demographic interest is heavily skewed and biassed and not representative of the whole population. This is because I only asked 17-18 year old, male teenagers, who are in school (and only 25% of those answered). (If I had more time and more resources, I would have picked a better sample population, consisting of people from every demographic to get the most accurate demographic data about the population)</li>
+            <li>My main goals from doing the forms, was to figure out the INTEREST, DEMAND, USEFULNESS, DEMOGRAPHICS, USER-NEEDS and FEATURES</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>User Needs</u></h2>
+        <ul>
+            <li>Users want a highly customizable product, which they can make their own and add their own vibe.</li>
+            <li>Users want a highly portable product, which can run everywhere and must have a good battery life, as they hate having to charge it regularly</li>
+            <li>Users ideally are looking for a cheaper alternative to current fitness trackers on the market.</li>
+            <li>Users also are very concerned about their privacy and biometric data.This means, we needs to store data safely.</li>
+            <li>The Users also wanted the product to be accurate. They saw no reason to switch from industry leaders, unless my product was more accurate.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Existing Products and Solutions</u></h2>
+        <ul>
+            <li>Currently, there are a couple of products that partially fulfil the features of my product.
+                Examples are (Apple Watch, Samsung Watch, FitBit & Garmin trackers). These are the industry standard and leaders in this market.
+                </li>
+            <li>There are many fitness trackers that accurately track sleep and stress. These trackers use external sensors to do so.</li>
+            <li>There currently are no commercial products, that combine all three factors (sleep, stress & light levels) and determine your happiness level via a video.</li>
+            <li>My product has a downside as it does not measure/track the above factors but instead relies on User Input about their satisfaction of the three factors (sleep, stress & light levels) to bias the ML algorithm to show the (%) happiness (maybe less accurate).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><u>Features of my product and its USP (Unique Selling Point)</u></h2>
+        <ul>
+            <li>It is highly customisable and you can always add more sensors and trackers to the Raspberry Pi in the future.</li>
+            <li>It is open-source as all the code is available to read and you can customise it to your wish.</li>
+            <li>It is much cheaper than the other solutions in the market ($40, $30 for Rpi & $10 for camera module).</li>
+            <li>Offers data security as the data is stored locally.</li>
+        </ul>
+    </section>
+
+    <section class="colorful-section">
+        <h2><u>Image Gallery</u></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/CurrentSolutions.png" alt="Image 1" onclick="expandImage(this)">
+                    <p><b>Pros and Cons of the current solutions available</b></p> 
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/SmartWatch_Sensor.avif" alt="Image 2" onclick="expandImage(this)">
+                    <p><b>Chart of all the sensors found a Samsung Watch</b></p> 
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/SensorsUsed.png" alt="Image 3" onclick="expandImage(this)">
+                    <p><b>Sensors that are currently being used by existing products</b></p> 
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="assets/SurveyData.png" alt="Image 3" onclick="expandImage(this)">
+                    <p><b>Result I collected from my Survey</b></p> 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy;Exam Number: 146792</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
